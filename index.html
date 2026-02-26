@@ -182,6 +182,55 @@
     }
 
 }
+@media (max-width: 576px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .category-bar {
+        gap: 15px;
+        padding: 8px;
+    }
+
+    /* All product sections single column */
+    #small-zepeto,
+    #small1-product,
+    #small2-product,
+    #small3-product,
+    #small4-product,
+    #small5-product,
+    #arr6,
+    #arr7,
+    #product,
+    #work {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Work section full width */
+    #work div {
+        width: 90% !important;
+        margin: 10px auto !important;
+    }
+
+    /* Footer responsive */
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+}
 </style>
 
 
