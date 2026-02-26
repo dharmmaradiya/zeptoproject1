@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zepto Popup</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eee;
+}
+
+
+.popup{
+    width:850px;
+    height:450px;
+    background:white;
+    border-radius:20px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.left{
+    width:50%;
+    background:linear-gradient(180deg,#7a1fa2,#5e0b88);
+    color:white;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.left h2{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.phone-box{
+    background:white;
+    border-radius:40px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.phone-box select{
+    border:none;
+    outline:none;
+    font-size:14px;
+    margin-right:10px;
+}
+
+.phone-box input{
+    border:none;
+    outline:none;
+    flex:1;
+    font-size:14px;
+}
+
+button{
+    background:linear-gradient(90deg,#ff2d92,#e60073);
+    border:none;
+    padding:15px;
+    border-radius:40px;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+.terms{
+    font-size:12px;
+    text-align:center;
+}
+
+.terms span{
+    color:#ff9ad6;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Right Section */
+.right{
+    width:50%;
+    background:#f3f3f3;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.right h3{
+    font-size:24px;
+    margin:15px 0;
+}
+
+.right p{
+    color:gray;
+    margin-bottom:20px;
+}
+
+.store{
+    width:200px;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="popup">
+
+   
+    <div class="left">
+        <div class="logo"><img src="https://cdn.zeptonow.com/production/app/images/zepto-logo-white.png" style="width:100px;"></div>
+        <h2>Lowest Prices Everyday<br>in minutes</h2>
+
+        <div class="phone-box">
+            <select>
+                <option>IN +91</option>
+                <option>IN +92</option>
+                <option>IN +93</option>
+
+            </select>
+           <input type="number" id="phone" placeholder="Enter Phone Number"> 
+
+
+        </div>
+<button id="continueBtn">Continue</button>
+        
+
+        <div class="terms">
+            By continuing, you agree to our <br>
+            <span>Terms of Service</span> & <span>Privacy Policy</span>
+        </div>
+    </div>
+
+    
+    <div class="right">
+        <div class="close">✕</div>
+
+        <h3>Order faster &<br>easier everytime</h3>
+        <p>with the Zepto App</p>
+
+        <img class="store" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+        <img class="store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+    </div>
+
+</div>
+<script>
+let btn = document.getElementById("continueBtn");
+
+btn.addEventListener("click", function(){
+
+    let phoneNumber = document.getElementById("phone").value;
+
+    if(phoneNumber === ""){
+        alert("Please enter phone number");
+        return;
+    }
+
+   
+    localStorage.setItem("zeptoPhone", phoneNumber);
+
+    alert("Phone Number Saved Successfully!");
+
+    
+    document.getElementById("phone").value = "";
+});
+btn.addEventListener("click", function(){
+
+    let phoneNumber = document.getElementById("phone").value;
+
+    if(phoneNumber === "") return alert("Enter phone number");
+
+    let numbers = JSON.parse(localStorage.getItem("zeptoPhones")) || [];
+
+    numbers.push(phoneNumber);
+
+    localStorage.setItem("zeptoPhones", JSON.stringify(numbers));
+
+    alert("Number Saved");
+}); 
+</script>
+
+</body>
+</html>

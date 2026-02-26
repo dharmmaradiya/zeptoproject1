@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+   .category-item {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.category-item:hover {
+    color: #a020f0;
+}
+
+.category-item.active {
+    color: #a020f0;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .navbar .form-control {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .category-bar {
+        padding-left: 15px;
+    }
+}
+
+    .footer {
+        background: #f4f4f4;
+        padding: 60px 80px;
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+
+    .footer-left {
+        max-width: 280px;
+    }
+
+    .footer-logo {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ff4d6d;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons i {
+        font-size: 22px;
+        color: #666;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .social-icons i:hover {
+        color: #ff4d6d;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        color: #777;
+        margin: 6px 0;
+    }
+
+
+    .footer-column {
+        min-width: 180px;
+    }
+
+    .footer-column h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .footer-column ul li:hover {
+        color: #ff4d6d;
+    }
+
+
+    .app-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .app-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .app-btn i {
+        font-size: 20px;
+    }
+    /* ============================= */
+/* RESPONSIVE MEDIA QUERY START */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .category-bar {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* All product sections wrap */
+    #small-product,
+    #small1-product,
+    #small2-product,
+    #small3-product,
+    #small4-product,
+    #small5-product {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* Product images responsive */
+    #small-product img,
+    #small1-product img,
+    #small2-product img,
+    #small3-product img,
+    #small4-product img,
+    #small5-product img {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    /* Category images */
+    #small-zepeto img {
+        width: 80px !important;
+        height: auto !important;
+    }
+
+    /* Poster images */
+    #poster img,
+    #poster1 img,
+    #poster2 img {
+        width: 90% !important;
+        margin-left: 5% !important;
+        height: auto !important;
+    }
+
+    /* How it works */
+    #work {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    #work div {
+        width: 40% !important;
+        margin: 15px !important;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .category-bar {
+        gap: 15px;
+        padding: 8px;
+    }
+
+    /* All product sections single column */
+    #small-product,
+    #small1-product,
+    #small2-product,
+    #small3-product,
+    #small4-product,
+    #small5-product {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Product images */
+    #small-product img,
+    #small1-product img,
+    #small2-product img,
+    #small3-product img,
+    #small4-product img,
+    #small5-product img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    /* Category images */
+    #small-zepeto {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    #small-zepeto img {
+        width: 70px !important;
+    }
+
+    /* Posters */
+    #poster img,
+    #poster1 img,
+    #poster2 img {
+        width: 95% !important;
+        margin-left: 2.5% !important;
+        height: auto !important;
+    }
+
+    /* How it works full width */
+    #work {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #work div {
+        width: 90% !important;
+        margin: 15px auto !important;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+</style>
+
+<body>
+ <nav class="navbar navbar-expand-lg bg-light px-4">
+    <div class="container-fluid">
+
+        <!-- Logo + Location -->
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+            <img src="https://cdn.zeptonow.com/web-static-assets-prod/artifacts/14.18.0/images/header/primary-logo.svg" width="90">
+            <span class="small">Select Location <i class="fa fa-chevron-down"></i></span>
+        </a>
+
+        <!-- Toggle Button (Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+
+            <!-- Search -->
+            <form class="d-flex w-50 mx-auto my-3 my-lg-0">
+                <input class="form-control rounded-3" type="search" placeholder="Search for products...">
+            </form>
+
+            <!-- Right Side -->
+            <div class="d-flex align-items-center gap-4">
+                <a href="zeptologin.html" class="text-decoration-none text-dark">
+                    <i class="fa-regular fa-user"></i> Login
+                </a>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- CATEGORY BAR -->
+<div class="category-bar bg-light py-2">
+    <div class="container-fluid d-flex gap-4 overflow-auto">
+
+        <a href="index.html" class="category-item active">
+            <i class="fa-solid fa-bag-shopping"></i> All
+        </a>
+
+        <a href="zeptocafe.html" class="category-item">
+            <i class="fa-solid fa-mug-hot"></i> Cafe
+        </a>
+
+        <a href="index.html" class="category-item">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="zeptotoy.html" class="category-item">
+            <i class="fa-solid fa-child"></i> Toys
+        </a>
+
+        <a href="zeptofresh.html" class="category-item">
+            <i class="fa-solid fa-apple-whole"></i> Fresh
+        </a>
+
+        <a href="zeptoelectronices.html" class="category-item">
+            <i class="fa-solid fa-headphones"></i> Electronics
+        </a>
+
+        <a href="zeptomobile.html" class="category-item">
+            <i class="fa-solid fa-mobile-screen-button"></i> Mobiles
+        </a>
+
+        <a href="#" class="category-item">
+            <i class="fa-solid fa-paintbrush"></i> Beauty
+        </a>
+
+        <a href="zeptofashion.html" class="category-item">
+            <i class="fa-solid fa-shirt"></i> Fashion
+        </a>
+
+    </div>
+</div>
+    <h1>Season's Freshest Picks</h1>
+    <div id="small-product" style="display:flex;justify-content:space-around;"></div>
+    <h1>Lowest Prices on Exotics</h1>
+    <div id="small1-product" style="display:flex;justify-content:space-around;"></div>
+    <h1>Shop by Category</h1>
+    <div id="small-zepeto" style="display:flex;"></div>
+    <h1>Fresh Arrivals</h1>
+    <div id="small2-product" style="display:flex;justify-content:space-around;"></div>
+    <h1>Fresh Vegetables</h1>
+    <div id="small3-product" style="display:flex;justify-content:space-around;"></div>
+    <h1>Fresh Fruits</h1>
+    <div id="small4-product" style="display:flex;justify-content:space-around;"></div>
+    <div id="poster"></div>
+    <div id="small5-product" style="display:flex;justify-content:space-around;"></div>
+    <div id="poster1"></div>
+    <div id="poster2"></div>
+<h1 style="text-align:center">How it Works</h1>
+        <div id="work" style="display:flex;" ></div>
+ <footer class="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-left">
+                <img src="https://cdn.zeptonow.com/web-static-assets-prod/artifacts/14.18.0/images/logo.svg"
+                    style="height:30px">
+
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <p>© Zepto Marketplace Private Limited</p>
+                <p>fssai lic no : 11224999000872</p>
+            </div>
+
+
+            <div class="footer-column">
+
+                <ul>
+                    <li>Home</li>
+                    <li>Delivery Areas</li>
+                    <li>Careers</li>
+                    <li>Customer Support</li>
+                    <li>Press</li>
+                    <li>Mojo - a Zepto Blog</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Use</li>
+                    <li>Responsible Disclosure Policy</li>
+                    <li>Sell on Zepto</li>
+                    <li>Deliver with Zepto</li>
+                    <li>Franchise with Zepto</li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h4>Download App</h4>
+                <div class="app-buttons">
+                    <div class="app-btn">
+                        <i class="fa-brands fa-google-play"></i>
+                        Get it on play store
+                    </div>
+                    <div class="app-btn">
+                        <i class="fa-brands fa-apple"></i>
+                        Get it on app store
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        let arr1 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/6379759f-1ce2-4726-b7ea-f8dbb4b8eabc.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-2000-2000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a5c7bf3c-73e9-410f-9c8e-8b8992db846b.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr1.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small-product").append(div)
+        })
+        let arr2 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/f808938d-9f67-4585-8c42-9c594dd15f2e.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr2.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small1-product").append(div)
+        })
+        let arr = [
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/ad4464cc-1823-4e4e-994c-f1c7e9b6e60f.png",
+
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/93be5e0e-cdd7-4132-8635-ee85118fc263.png",
+
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/bb6f039c-29c5-4a73-be54-33226e12885d.png",
+
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/6a7b35d0-0412-42b6-9689-c601551c8788.png",
+
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/e3be7bd4-db18-4b9c-af94-d120d5fc2d06.png",
+
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-120,ar-416-465,pr-true,f-auto,,q-40/inventory/banner/7ede2da1-2507-45af-95fb-e31307c666bc.png",
+
+            },
+
+
+        ]
+        arr.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "100px"
+            image.style.height = "150px"
+            image.style.marginTop = "10px"
+            image.style.margin = "10px"
+
+
+
+            div.append(image)
+            document.querySelector("#small-zepeto").append(div)
+        })
+        let arr3 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/f808938d-9f67-4585-8c42-9c594dd15f2e.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr3.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small2-product").append(div)
+        })
+        let arr4 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/f808938d-9f67-4585-8c42-9c594dd15f2e.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr4.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small3-product").append(div)
+        })
+        let arr5 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/f808938d-9f67-4585-8c42-9c594dd15f2e.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr5.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small4-product").append(div)
+        })
+        let div1 = document.createElement("div");
+        div1.style.width = "100%";
+
+        let image1 = document.createElement("img");
+        image1.src = "https://cdn.zeptonow.com/production/tr:w-1280,ar-1440-88,pr-true,f-auto,,q-40,dpr-2/inventory/banner/b11ca9ae-7168-4564-aeb2-2e59c1d49cb9.png";
+        image1.style.height = "100px";
+        image1.style.width = "100%";
+        image1.style.marginTop = "10px"
+        div1.append(image1);
+        document.querySelector("#poster").append(div1);
+        let arr6 = [
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/1830bff1-92d3-4b13-bb3d-19b849c6b669.jpg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹268"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  | <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-937-937,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/160d217f-5f1d-4b78-b0a9-741bfa54c045.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹220"
+            },
+
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/24c084a3-7fd6-4712-82c5-0bd151a51ece.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹194"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-858-858,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/a57eda5b-6a13-4cfd-a029-819dd98f0ebf.png",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch  <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k)",
+                pbtn: "₹360"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/f808938d-9f67-4585-8c42-9c594dd15f2e.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid |  <br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹299"
+            },
+            {
+                image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,,q-40,dpr-2/cms/product_variant/d383e675-0e63-423f-8e46-e08e67e86ea2.jpeg",
+                name: "Rin Matic Top Load <br> Detergent Liquid  |<br> Pouch <br> 1 pack (2 L) <br> Fresh & Fragrant <br>⭐4.7(5.8k) ",
+                pbtn: "₹346"
+            },
+
+        ]
+        arr6.map((el, i) => {
+            let div = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = el.image
+            image.style.width = "150px"
+            image.style.height = "150px"
+            image.style.borderRadius = "10px"
+            image.style.border = "0.5px solid gray"
+            image.style.boxShadow = "2px 2px 2px 2px gray"
+            image.style.margin = "10px"
+            let name = document.createElement("p")
+            name.innerHTML = el.name
+            let btn = document.createElement("button")
+            btn.innerHTML = "ADD"
+            btn.style.width = "50px"
+            btn.style.height = "30px"
+            btn.style.borderRadius = "10px"
+            btn.style.color = "red"
+            btn.style.margin = "10px"
+            btn.style.border = "0.5px solid pink"
+            btn.style.boxShadow = "2px 2px 2px 2px pink "
+            let pbtn = document.createElement("button")
+            pbtn.innerHTML = el.pbtn
+            pbtn.style.width = "50px"
+            pbtn.style.height = "30px"
+            pbtn.style.borderRadius = "10px"
+            pbtn.style.color = "white"
+            pbtn.style.backgroundColor = "green"
+            pbtn.style.margin = "10px"
+            div.append(image, btn, pbtn, name)
+            document.querySelector("#small5-product").append(div)
+        })
+        let div2 = document.createElement("div");
+        div2.style.width = "100%";
+
+        let image2 = document.createElement("img");
+        image2.src = "https://cdn.zeptonow.com/production/tr:w-1280,ar-1440-240,pr-true,f-auto,,q-40,dpr-2/inventory/banner/90aea771-ae90-476d-ace7-9dfc252881bf.png";
+        image2.style.height = "100px";
+        image2.style.width = "60%";
+        image2.style.marginLeft = "20%"
+        image2.style.marginTop = "10px"
+        div2.append(image2);
+        document.querySelector("#poster1").append(div2);
+        let div3 = document.createElement("div");
+        div2.style.width = "100%";
+
+        let image3 = document.createElement("img");
+        image3.src = "https://cdn.zeptonow.com/production/tr:w-1080,ar-1080-651,pr-true,f-auto,,q-40,dpr-2/inventory/banner/c9e1d9fb-80aa-4f86-a26f-177a296c3f3f.png";
+        image3.style.height = "500px";
+        image3.style.width = "60%";
+        image3.style.marginLeft = "20%"
+        image3.style.marginTop = "10px"
+        div3.append(image3);
+        document.querySelector("#poster2").append(div3);
+          let arr10 = [
+            {
+                image: "https://cdn.zeptonow.com/web-static-assets-prod/artifacts/14.18.0/images/pdp/place-order.svg",
+                name: "Open the app <br> Choose from over 7000 products <br> across groceries, fresh fruits & <br> veggies, meat, pet care, beauty <br> items & more"
+            },
+             {
+                image: "https://cdn.zeptonow.com/web-static-assets-prod/artifacts/14.18.0/images/pdp/do-not-blink.svg",
+                name: "Open the app  <br>Choose from over 7000 products <br> across groceries, fresh fruits & <br> veggies, meat, pet care, beauty <br> items & more"
+            },
+            {
+                image: "https://cdn.zeptonow.com/web-static-assets-prod/artifacts/14.18.0/images/pdp/enjoy.svg",
+                name: "Open the app <br> Choose from over 7000 products <br> across groceries, fresh fruits & <br> veggies, meat, pet care, beauty <br> items & more"
+            }, 
+        ]
+        arr10.map((el,i)=>{
+            let div=document.createElement("div")
+            div.style.boxShadow = "2px 2px 2px 2px gray "
+            div.style.width="25%"
+           div.style.border="5px"
+             div.style.marginLeft="100px"
+           div.style.borderRadius="5px"
+            let image=document.createElement("img")
+            image.src=el.image
+            image.style.alignItems="center" 
+            image.style.marginLeft="35%"
+          
+            
+
+            let name=document.createElement("p")
+            name.innerHTML=el.name
+            name.style.textAlign="center"
+            div.append(image,name)
+            document.querySelector("#work").append(div)
+        })
+    </script>
+</body>
+
+</html>
